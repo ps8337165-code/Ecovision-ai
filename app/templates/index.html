@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <h1>EcoVision AI — Autonomous Sanitation Control Center</h1>
+            <p>Camera-Based Waste Overflow & Plastic Litter Detection System</p>
+        </div>
+        <div class="system-status">
+            <span class="status-indicator online"></span> System Online
+        </div>
+    </header>
+
+    <main class="dashboard-grid">
+        <section class="card video-section">
+            <h2>CCTV Feed Simulation (Camera #01 - Main Gate)</h2>
+            <div class="video-container">
+                <img src="/video_feed" alt="Live Stream Feed" width="100%">
+            </div>
+        </section>
+
+        <section class="sidebar-panel">
+            <div class="card metrics-card">
+                <h2>Real-Time Bin Metrics</h2>
+                <div class="metric-row">
+                    <span>Location:</span>
+                    <strong>Main Gate Plaza (Bin #102)</strong>
+                </div>
+                <div class="metric-row">
+                    <span>Target Priority Formula:</span>
+                    <code>P_score = (0.6 × Fill%) + (0.4 × Litter)</code>
+                </div>
+            </div>
+
+            <div class="card queue-card">
+                <h2>Priority Dispatch Queue</h2>
+                <div class="queue-item critical">
+                    <div class="queue-header">
+                        <h3>Bin #102 Alert</h3>
+                        <span class="badge danger">CRITICAL</span>
+                    </div>
+                    <p>Dynamic detection identified surrounding scattered plastic litter.</p>
+                    <button class="btn-dispatch" onclick="dispatchStaff()">
+                        🚀 Dispatch Staff Alert
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

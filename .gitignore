@@ -1,0 +1,11 @@
+# Virtual Environment
+.venv/
+venv/
+
+# Python Cache
+_pycache_/
+*.pyc
+
+# IDE Settings
+.vscode/
+.DS_Store
